@@ -43,26 +43,14 @@ NUM_FEATURES_PER_TONE = 3
 debug = ''
 #debug = 'overfit'
 sources                              = {}
-sources['classical']                 = {}
-sources['classical']['alkan']        = ['http://www.classicalmidi.co.uk/alkan.htm']
-sources['classical']['adam']         = ['http://www.classicalmidi.co.uk/adam.htm']
-sources['classical']['aguado']       = ['http://www.classicalmidi.co.uk/aguadodion.htm']
-sources['classical']['albenizisaac'] = ['http://www.classicalmidi.co.uk/albeniz.htm']
-sources['classical']['albenizmateo'] = ['http://www.classicalmidi.co.uk/albenizmateo.htm']
-sources['classical']['albinoni']     = ['http://www.classicalmidi.co.uk/albinoni.htm']
-sources['classical']['alford']       = ['http://www.classicalmidi.co.uk/alford.htm']
-sources['classical']['anderson']     = ['http://www.classicalmidi.co.uk/anderson.htm']
-sources['classical']['ansell']       = ['http://www.classicalmidi.co.uk/anselljohn.htm']
-sources['classical']['arensky']      = ['http://www.classicalmidi.co.uk/arensky.htm']
-sources['classical']['arriaga']      = ['http://www.classicalmidi.co.uk/arriag.htm']
-sources['classical']['bach']         = ['http://www.midiworld.com/bach.htm','http://www.classicalmidi.co.uk/bach.htm']
-sources['classical']['bartok']       = ['http://www.midiworld.com/bartok.htm','http://www.classicalmidi.co.uk/bartok.htm']
-sources['classical']['barber']       = ['http://www.classicalmidi.co.uk/barber.htm']
-sources['classical']['barbieri']     = ['http://www.classicalmidi.co.uk/barbie.htm']
-sources['classical']['bax']          = ['http://www.classicalmidi.co.uk/bax.htm']
-sources['classical']['beethoven']    = ['http://www.midiworld.com/beethoven.htm','http://www.classicalmidi.co.uk/beethoven.htm']
-sources['classical']['bellini']      = ['http://www.classicalmidi.co.uk/bellini.htm']
-sources['classical']['berlin']       = ['http://www.classicalmidi.co.uk/berlin.htm']
+sources['jazz'] = {}
+sources['jazz']['composer_1'] = []
+sources['jazz']['composer_2'] = []
+sources['jazz']['composer_3'] = []
+sources['jazz']['composer_4'] = []
+sources['jazz']['composer_5'] = []
+
+
 
 
 
@@ -70,29 +58,28 @@ ignore_patterns                      = ['xoom']
 
 file_list = {}
 
-file_list['validation'] = ['classical/byrd/byrd17.mid', \
-'classical/handel/Mes03.mid', \
-'classical/bach/430bjsbmm15.mid', \
-'classical/beethoven/1472beetpc5mov3.mid', \
-'classical/messager/2595mirette04.mid', 'classical/mendelssohn/Eli09.mid', \
-'classical/liszt/2074hungarian.mid', \
-'classical/vaughan/612march2Steven.mid', \
-'classical/chopin/mazrka13.mid', \
-'classical/albenizmateo/albenizmateosonatazapateadop5t.mid', \
-'classical/handel/va-tacit.mid', \
-'classical/carulli/843guitar.mid']
+file_list['validation'] = ['jazz/composer_1/ColemanHawkins_MyBlueHeaven_FINAL.mid', \
+  'jazz/composer_2/DavidMurray_AskMeNow_FINAL.mid', \
+  'jazz/composer_2/DavidMurray_BodyAndSoul-1_FINAL.mid', \
+  'jazz/composer_3/BobBerg_BluesForBela_FINAL.mid', \
+  'jazz/composer_4/CharlieParker_BluesForAlice_FINAL.mid', \
+  'jazz/composer_4/BranfordMarsalis_ThreeLittleWords_FINAL.mid', \
+  'jazz/composer_5/ChrisPotter_Arjuna_FINAL.mid', \
+  'jazz/composer_1/ArtPepper_Anthropology_FINAL.mid', \
+  'jazz/composer_1/ArtPepper_Stardust-2_FINAL.mid', \
+  'jazz/composer_1/CliffordBrown_JoySpring_FINAL.mid']
 
-file_list['test'] = ['classical/mozart/245div1.mid', \
-'classical/byrd/1731fantasia2.mid', \
-'classical/mozart/mozk333a.mid', \
-'classical/puccini/155.mid', \
-'classical/nikolaievich/2096maz25n9.mid', \
-'classical/grain/850gumsuckr.mid', \
-'classical/brahms/1369brawalz6.mid', \
-'classical/hummel/hummel3.mid', \
-'classical/messager/2598mirette07.mid', \
-'classical/ravel/331Grecque4.mid', \
-'classical/garoto/343des.mid']
+file_list['test'] = ['jazz/composer_2/DexterGordon_Cheesecake_FINAL.mid', \
+  'jazz/composer_2/DexterGordon_Dextivity_FINAL.mid', \
+  'jazz/composer_2/DexterGordon_Montmartre_FINAL-1_FINAL.mid', \
+  'jazz/composer_3/BenWebster_DidYouCallHerToday_FINAL.mid', \
+  'jazz/composer_4/BennyGoodman_Avalon_FINAL.mid', \
+  'jazz/composer_4/CharlieParker_OutOfNowhere_FINAL.mid', \
+  'jazz/composer_5/ChuBerry_BodyAndSoul-1_FINAL.mid', \
+  'jazz/composer_1/CliffordBrown_Jordu_FINAL.mid', \
+  'jazz/composer_1/ArtPepper_Desafinado_FINAL-2_FINAL.mid', \
+  'jazz/composer_1/CurtisFuller_DownUnder_FINAL.mid']
+
 
 class MusicDataLoader(object):
 
